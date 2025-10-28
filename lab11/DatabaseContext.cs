@@ -8,4 +8,8 @@ public class DatabaseContext: DbContext
     {
         optionsBuilder.UseSqlite("Data Source=database.db");
     }
+    
+    public DbSet<Payment> Payments { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<User> Users { get; set; }
 }

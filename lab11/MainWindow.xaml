@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DG">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="35"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="100"/>
+                <DataGridTextColumn Header="DateTime" Binding="{Binding DateTime}" Width="120"/>
+                <DataGridTextColumn Header="UserId" Binding="{Binding UserId}" Width="45"/>
+                <DataGridTextColumn Header="User" Binding="{Binding User.Name}" Width="100"/>
+                <DataGridTextColumn Header="CategoryId" Binding="{Binding CategoryId}" Width="65"/>
+                <DataGridTextColumn Header="Category" Binding="{Binding Category.Name}" Width="80" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
